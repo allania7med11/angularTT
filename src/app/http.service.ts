@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 export class HttpService {
 
   constructor(private http: HttpClient) { }
-  getBeer() {
-    return this.http.get('http://localhost:8000/api/test')
+  getMessage() {
+    return this.http.get('/api/test')
   }
 }

@@ -8,12 +8,12 @@ import { HttpService } from './http.service';
 })
 export class AppComponent {
   title = 'angular-tour-of-heroes';
-  brews: Object;
+  message: Object = { proxy: "nothing" };
   constructor(private _http: HttpService) { }
   ngOnInit() {
-    this._http.getBeer().subscribe(data => {
-      this.brews = data
-      console.log(this.brews);
+    this._http.getMessage().subscribe(data => {
+      this.message = data
+      console.log(this.message);
     })
   }
 }
