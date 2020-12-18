@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
 export class HttpService {
 
-  constructor() { }
-  myMethod() {
-    return 'Hey, what is up!';
+  constructor(private http: HttpClient) { }
+  getBeer() {
+    return this.http.get('http://localhost:8000/api/test')
   }
 }

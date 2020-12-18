@@ -8,9 +8,12 @@ import { HttpService } from './http.service';
 })
 export class AppComponent {
   title = 'angular-tour-of-heroes';
+  brews: Object;
   constructor(private _http: HttpService) { }
   ngOnInit() {
-    let res = this._http.myMethod();
-    console.log({res})
+    this._http.getBeer().subscribe(data => {
+      this.brews = data
+      console.log(this.brews);
+    })
   }
 }
