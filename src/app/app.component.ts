@@ -10,10 +10,10 @@ export class AppComponent {
   title = 'angular-tour-of-heroes';
   message: Object = { proxy: "nothing" };
   constructor(private _http: HttpService) { }
-  ngOnInit() {
-    this._http.getMessage().subscribe(data => {
-      this.message = data
-      console.log(this.message);
-    })
-  }
+  // ngOnInit() {
+  //   this._http.getMessage().subscribe(data => {
+  //     this.message = data
+  //     console.log(this.message);
+  //   })
+  // }
 }
